@@ -1,0 +1,67 @@
+*{box-sizing:border-box}
+body{font-family:Segoe UI,Arial,sans-serif;background:#f4f6fa;color:#222;margin:0;line-height:1.6}
+.wrap{max-width:760px;margin:30px auto;padding:0 16px}
+.card{background:#fff;border-radius:10px;padding:22px 26px;box-shadow:0 2px 8px rgba(0,0,0,.08);margin-bottom:20px}
+h1{margin-top:0;color:#1d3b72}
+h2,h3{color:#1d3b72}
+label{display:block;margin:10px 0 4px;font-weight:600}
+input,select{width:100%;padding:8px 10px;border:1px solid #bbb;border-radius:6px;font-size:1rem}
+button,.btn{display:inline-block;margin-top:14px;margin-right:6px;padding:9px 18px;background:#1d3b72;color:#fff;border:0;border-radius:6px;font-size:1rem;cursor:pointer;text-decoration:none}
+button:hover,.btn:hover{background:#2c5099}
+button[type=reset]{background:#777}
+.error{background:#fdecea;border-left:4px solid #d93025;padding:10px 14px;border-radius:4px;margin:12px 0}
+.error ul{margin:0;padding-left:20px}
+.sukses{background:#e6f4ea;border-left:4px solid #188038;padding:10px 14px;border-radius:4px;margin:12px 0}
+table{border-collapse:collapse;width:100%}
+td,th{border:1px solid #ddd;padding:8px 10px;text-align:left}
+th{background:#eef2fa;width:35%}
+.menu a{display:block;padding:10px 14px;margin:6px 0;background:#eef2fa;border-radius:6px;color:#1d3b72;text-decoration:none;font-weight:600}
+.menu a:hover{background:#dbe5f7}
+.back{display:inline-block;margin-bottom:12px;color:#1d3b72}
+code{background:#eef2fa;padding:2px 6px;border-radius:4px}
+
+/* ===== Fitur bonus: dashboard, statistik, kartu, mode gelap ===== */
+.wrap.lebar{max-width:1000px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:14px 0}
+.stat{background:#eef2fa;border-radius:10px;padding:14px 16px}
+.stat b{display:block;font-size:1.7rem;color:#1d3b72}
+.stat small{color:#555}
+.bar-row{display:flex;align-items:center;gap:10px;margin:6px 0}
+.bar-row .label{width:170px;font-size:.9rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar{flex:1;background:#dbe5f7;border-radius:5px}
+.bar span{display:block;height:18px;background:linear-gradient(90deg,#1d3b72,#4a7bd8);border-radius:5px;min-width:6px}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:end;margin:10px 0}
+.toolbar>*{flex:1;min-width:140px}
+.toolbar button,.toolbar .btn{margin:0;flex:0 0 auto}
+.btn.kecil,button.kecil{padding:4px 10px;font-size:.85rem;margin:0}
+.btn.merah,button.merah{background:#c5221f}
+.btn.abu{background:#777}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:700px){.cols{grid-template-columns:1fr}}
+.kartu{max-width:380px;border-radius:16px;padding:20px;color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.25);margin:10px 0}
+.kartu .avatar{width:70px;height:70px;border-radius:50%;background:rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;font-size:1.8rem;font-weight:700;float:right}
+.kartu h3{color:#fff;margin:0 0 4px}
+.kartu p{margin:2px 0;font-size:.92rem}
+.kartu .univ{letter-spacing:2px;font-size:.75rem;opacity:.85;text-transform:uppercase}
+.kosong{text-align:center;color:#777;padding:18px}
+.tema-toggle{float:right;font-size:.9rem}
+
+body.gelap{background:#12151c;color:#e3e6ee}
+body.gelap .card{background:#1c212c;box-shadow:none}
+body.gelap h1,body.gelap h2,body.gelap h3,body.gelap .back{color:#8fb4ff}
+body.gelap input,body.gelap select{background:#262c3a;color:#eee;border-color:#3b4457}
+body.gelap th{background:#262c3a}
+body.gelap td,body.gelap th{border-color:#333b4d}
+body.gelap .stat{background:#262c3a}
+body.gelap .stat b{color:#8fb4ff}
+body.gelap .stat small{color:#aab}
+body.gelap .bar{background:#262c3a}
+body.gelap .error{background:#3a1f1f}
+body.gelap .sukses{background:#1c3324}
+body.gelap code{background:#262c3a}
+
+@media print{
+  body *{visibility:hidden}
+  .kartu,.kartu *{visibility:visible}
+  .kartu{position:absolute;left:0;top:0}
+}
